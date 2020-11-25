@@ -303,9 +303,84 @@ div.wrapper-content section.timeline aside.header span:first-child{
     padding-left: 10px;
 }
 
-div.wrapper-content section.timeline section.content{
+div.wrapper-content section.timeline section.main{
     height: 100%;
     width: 100%;
     margin-top: 2px;
     background-color: #FFF;    
+    display: flex;
+    flex-direction: column;
+}
+
+div.wrapper-content section.timeline section.main div.tweet{
+    display: flex;
+    position: relative;
+}
+
+div.wrapper-content section.timeline section.main div.tweet>img{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin: 8px 8px 0px 8px;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content div.author{
+    display: flex;
+    padding-top: 12px;
+    align-items: center;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content div.author strong{
+    font-size: 12px;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content div.author span{
+    font-size: 11px;
+    font-weight: bold;
+    color: #667580;
+    margin-left: 4px;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content div.author div.circle{
+    background-color: #667580;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    margin-left: 4px;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content div.description{
+    padding-top: 4px;
+    font-size: 14px;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content div.buttons>img:first-child{
+    margin-left: 0px;
+}
+
+div.wrapper-content section.timeline section.main div.tweet aside.content div.buttons{
+    padding-top: 20px;
+    margin-bottom: 8px;
+}
+
+div.wrapper-content section.timeline section.main div.tweet::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #E6ECF0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+div.wrapper-content section.timeline section.main div.tweet aside.content div.buttons>img{
+    height: 20px;
+    width: 20px;
+    margin-left: 45px;
 }
