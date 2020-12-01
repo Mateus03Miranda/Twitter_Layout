@@ -239,6 +239,14 @@ div.wrapper-content aside.profile #avatar{
     border-radius: 50%;
     border: 6px solid #FFF;
     margin-top: -140px;
+    transition: 0.5s;
+}
+
+div.wrapper-content aside.profile #avatar:hover{
+    border: 3px solid #16abdd;
+    height: 204px;
+    width: 204px;
+    cursor: pointer;
 }
 
 div.wrapper-content aside.profile span{
@@ -365,6 +373,11 @@ div.wrapper-content section.timeline section.main div.tweet aside.content div.bu
     margin-bottom: 8px;
 }
 
+div.wrapper-content section.timeline section.main div.tweet aside.content div.buttons>img:hover{
+    height: 22px;
+    width: 22px;
+}
+
 div.wrapper-content section.timeline section.main div.tweet::after{
     content: '';
     width: 100%;
@@ -378,6 +391,7 @@ div.wrapper-content section.timeline section.main div.tweet aside.content div.bu
     height: 20px;
     width: 20px;
     margin-left: 45px;
+    transition: 0.3s;
 }
 
 div.wrapper-content aside.widgets{
@@ -421,6 +435,12 @@ div.wrapper-content aside.widgets ul.suggested li{
     display: flex;
     position: relative;
     padding-top: 3vh;
+    transition: 2.8s;
+}
+
+div.wrapper-content aside.widgets ul.suggested:hover>li div.content button{
+    width: 100px;
+    height: 35px;
 }
 
 div.wrapper-content aside.widgets ul.suggested li:first-child{
@@ -450,11 +470,14 @@ div.wrapper-content aside.widgets ul.suggested li div.content{
     flex-direction: column;
     padding-left: 8px;
     flex-grow: 1;
+    transition: 2.8s;
 }
 
 div.wrapper-content aside.widgets ul.suggested li div.content div.name{
     display: flex;
     align-items: center;
+    transition: 2.8s;
+    justify-self: flex-start;
 }
 
 div.wrapper-content aside.widgets ul.suggested li div.content div.name > *{
@@ -471,14 +494,7 @@ div.wrapper-content aside.widgets ul.suggested li div.content div.name span{
     font-weight: bold;
 }
 
-div.wrapper-content aside.widgets ul.suggested li div.content div.name div.close {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-    margin-right: 10px;
-}
-
-div.wrapper-content aside.widgets ul.suggested li div.content div.name div.close button{
+div.wrapper-content aside.widgets ul.suggested li div.content div.name button{
     border: none;
     background-color: #FFF;
     color: #667580;
@@ -487,9 +503,11 @@ div.wrapper-content aside.widgets ul.suggested li div.content div.name div.close
     width: 10px;
     padding-right: 0px;
     font-size: 14px;
+    margin-left: auto;
+    margin-right: 10px;
 }
 
-div.wrapper-content aside.widgets ul.suggested li div.content div.name div.close button:hover{
+div.wrapper-content aside.widgets ul.suggested li div.content div.name button:hover{
     color: #E26044;
     font-size: 18px;
 }
