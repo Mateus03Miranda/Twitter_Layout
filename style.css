@@ -460,6 +460,13 @@ div.wrapper-content aside.widgets div.title span{
     padding-left: 4px;
     font-size: 10px;
     color: #3BB9E3;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+div.wrapper-content aside.widgets div.title span:hover{
+    font-size: 11px;
+    text-decoration: underline #3BB9E3;
 }
 
 div.wrapper-content aside.widgets div.title span:last-child{
@@ -473,7 +480,6 @@ div.wrapper-content aside.widgets div.title div.circle{
 div.wrapper-content aside.widgets ul.suggested {
     display: flex;
     flex-direction: column;
-    padding-top: 2vh;
     list-style: none;
     width: 23vw;
 }
@@ -481,13 +487,15 @@ div.wrapper-content aside.widgets ul.suggested {
 div.wrapper-content aside.widgets ul.suggested li{
     display: flex;
     position: relative;
-    padding-top: 3vh;
-    transition: 0.8s;
+    padding-top: 8px;
+    transition: 0.5s;
+    height: 9.5vh;
 }
 
 div.wrapper-content aside.widgets ul.suggested li:hover{
-    background-color: #e5e5e5;
+    background-color: #f8f7f7;
     border-radius: 3px;
+    padding-left: 6px;
 }
 
 div.wrapper-content aside.widgets ul.suggested:hover>li div.content button{
@@ -495,8 +503,15 @@ div.wrapper-content aside.widgets ul.suggested:hover>li div.content button{
     height: 35px;
 }
 
-div.wrapper-content aside.widgets ul.suggested li:first-child{
-    padding-top: 0vh;
+div.wrapper-content aside.widgets ul.suggested li:first-child::before{
+    content: '';
+    height: 2px;
+    width: 95%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    background-color: #E6ECF0;
 }
 
 div.wrapper-content aside.widgets ul.suggested li::after{
@@ -505,10 +520,9 @@ div.wrapper-content aside.widgets ul.suggested li::after{
     width: 95%;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 99%;
     border-radius: 4px;
     background-color: #E6ECF0;
-    margin-top: 8px;
 }
 
 div.wrapper-content aside.widgets ul.suggested li img{
