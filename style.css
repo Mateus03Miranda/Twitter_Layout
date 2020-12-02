@@ -26,9 +26,14 @@ input,button{
     z-index: 1;
 }
 
+#main-header nav {
+    height: 100%;
+}
+
 #main-header nav ul{
     display: flex;
     list-style: none;
+    height: 100%;
     align-items: center;
 }
 
@@ -38,13 +43,50 @@ input,button{
     font-size: 13px;
     color:#667580;
     font-weight: bold;
-    margin-right: 8px;
+    margin-right: 12px;
+    transition:0.3s;
+    cursor: pointer;
 }
 
-#main-header nav ul li img{
-    height: 25px;
-    width: 25px;
-    margin-right: 7px;
+#main-header nav ul li:hover{
+    font-size: 14px;
+    color: #3BB9E3;
+}
+
+#main-header nav ul li div{
+    margin-right: 5px;
+    transition:0.3s;
+}
+
+#main-header nav ul li.home:hover>div{
+    background: url('./images/homeSelected.svg') no-repeat;
+}
+
+
+#main-header nav ul li.home div{
+    height: 23px;
+    width: 23px;
+    background: url('./images/home.svg') no-repeat ;
+}
+
+#main-header nav ul li.notification div{
+    height: 23px;
+    width: 23px;
+    background: url('./images/notification.svg') no-repeat ;
+}
+
+#main-header nav ul li.notification:hover>div{
+    background: url('./images/notificationSelected.svg') no-repeat;
+}
+
+#main-header nav ul li.message div{
+    height: 19px;
+    width: 28px;
+    background: url('./images/message.svg') no-repeat ;
+}
+
+#main-header nav ul li.message:hover>div{
+    background: url('./images/messageSelected.svg') no-repeat;
 }
 
 #main-header img{
@@ -297,13 +339,19 @@ div.wrapper-content section.timeline aside.header{
 div.wrapper-content section.timeline aside.header span{
     font-size: 16px;
     font-weight: bold;
-    padding-right: 30px;
+    margin-right: 30px;
     color: #3BB9E3;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+div.wrapper-content section.timeline aside.header span:hover{
+    font-size: 17px;
 }
 
 div.wrapper-content section.timeline aside.header span:first-child{
     color: #000;
-    padding-left: 10px;
+    margin-left: 10px;
 }
 
 div.wrapper-content section.timeline section.main{
@@ -425,7 +473,6 @@ div.wrapper-content aside.widgets div.title div.circle{
 div.wrapper-content aside.widgets ul.suggested {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
     padding-top: 2vh;
     list-style: none;
     width: 23vw;
@@ -435,7 +482,12 @@ div.wrapper-content aside.widgets ul.suggested li{
     display: flex;
     position: relative;
     padding-top: 3vh;
-    transition: 2.8s;
+    transition: 0.8s;
+}
+
+div.wrapper-content aside.widgets ul.suggested li:hover{
+    background-color: #e5e5e5;
+    border-radius: 3px;
 }
 
 div.wrapper-content aside.widgets ul.suggested:hover>li div.content button{
@@ -496,7 +548,7 @@ div.wrapper-content aside.widgets ul.suggested li div.content div.name span{
 
 div.wrapper-content aside.widgets ul.suggested li div.content div.name button{
     border: none;
-    background-color: #FFF;
+    background-color: rgba(0, 0, 0, 0);
     color: #667580;
     transition: 0.2s;
     height: 20px;
@@ -505,11 +557,12 @@ div.wrapper-content aside.widgets ul.suggested li div.content div.name button{
     font-size: 14px;
     margin-left: auto;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 div.wrapper-content aside.widgets ul.suggested li div.content div.name button:hover{
     color: #E26044;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
