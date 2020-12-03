@@ -96,6 +96,9 @@ input,button{
 
 #main-header div.side {
     display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
 }
 
 #main-header div.side input{
@@ -106,6 +109,16 @@ input,button{
     color:#667581;
     font-size: 12px;
     background:#F5F8FA url('./images/search.svg') no-repeat 175px center;
+    transition: 0.2s;
+}
+
+#main-header div.side input:focus{
+    padding-left:6px;
+    padding-right: 6px;
+    border: 1px solid #3BB9E3;
+    width: 240px;
+    background: none;
+    border-radius: 10px;
 }
 
 #main-header div.side img{
@@ -113,6 +126,12 @@ input,button{
     width: 34px;
     border-radius: 50%;
     margin: 0 15px;
+    transition: 0.4s;
+}
+
+#main-header div.side img:hover{
+    height: 38px;
+    width: 38px;
 }
 
 #main-header div.side button{
@@ -169,15 +188,9 @@ div.bar ul{
     height: 100%;
 }
 
-div.bar li.active::after{
-    content: '';
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #3BB9E3;
-}
+/* div.bar li.active::after{
+
+} */
 
 div.bar li{
     display: flex;
@@ -188,6 +201,15 @@ div.bar li{
     padding: 0 15px;
     position: relative;
     height: 100%;
+    transition: 0.2s;
+}
+
+div.bar li:hover{
+    border-bottom: 3px solid #3BB9E3; 
+}
+
+div.bar li:hover>strong{
+    color: #3BB9E3;
 }
 
 div.bar li:first-child{
@@ -207,9 +229,6 @@ div.bar li strong{
     font-weight: bold;
 }
 
-div.bar li.active strong{
-    color:#3BB9E3;
-}
 
 div.bar div.actions{
     margin-right: 150px;
@@ -493,7 +512,7 @@ div.wrapper-content aside.widgets ul.suggested li{
 }
 
 div.wrapper-content aside.widgets ul.suggested li:hover{
-    background-color: #f8f7f7;
+    background-color: #eeeeee;
     border-radius: 3px;
     padding-left: 6px;
 }
