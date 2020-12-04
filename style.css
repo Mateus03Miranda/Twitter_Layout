@@ -436,8 +436,10 @@ div.wrapper-content section.timeline section.main div.tweet aside.content div.bu
 }
 
 div.wrapper-content section.timeline section.main div.tweet aside.content div.buttons{
-    padding-top: 20px;
-    margin-bottom: 8px;
+    padding-top: 14px;
+    height: 45px;
+    display: flex;
+    align-items: center;
 }
 
 div.wrapper-content section.timeline section.main div.tweet aside.content div.buttons>img:hover{
